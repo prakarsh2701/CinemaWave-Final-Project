@@ -1,0 +1,34 @@
+
+<div class="background">
+    <div class="left-panel"></div>
+    <div class="right-panel">
+      <mat-card class="login-card">
+        <div class="flex-fill">
+          <!-- <img class="align-content-center" src="assets/images/logo.png" alt="abc" > -->
+          <a class="navbar-brand" href="#">CinemaWave</a>
+        </div>
+        <mat-card-header>
+          <mat-card-title><h1>Login</h1></mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <form (ngSubmit)="onsubmit()" #LoginForm="ngForm">
+
+            <mat-form-field class="full-width">
+              <input matInput placeholder="Email" name="email" [(ngModel)]="loginForm.email" #emailCtrl="ngModel" required>
+              <mat-error *ngIf="emailCtrl?.errors?.['required']">Email is required</mat-error>
+              <mat-error *ngIf="emailCtrl?.errors?.['email']">Invalid email format</mat-error>
+            </mat-form-field>
+            
+            <mat-form-field class="full-width">
+              <input matInput type="password" placeholder="Password" name="password" [(ngModel)]="loginForm.password" #passwordCtrl="ngModel" required>
+              <mat-error *ngIf="passwordCtrl?.errors?.['required']">Password is required</mat-error>
+            </mat-form-field>
+         
+            <button mat-raised-button color="primary" class="login-button" [disabled]="!LoginForm.form.valid">Login</button>
+          </form>
+          <div class="ref"><p>Don't have an account?<a routerLink="/userRegistration">Join Cinema wave</a></p>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>

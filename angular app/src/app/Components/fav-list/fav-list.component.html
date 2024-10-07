@@ -1,0 +1,40 @@
+<!-- <app-navbar id="navbar"></app-navbar> -->
+<div id = "body">
+<div id="card-container">
+    <mat-card id = "card "  *ngFor="let movies of Movie" >
+        <mat-card-header>
+            <div id = "Movie-image">
+
+                <img [src] = "movies.image" alt="">
+
+            </div>
+        </mat-card-header>
+        <mat-card-content id = "movie-description">
+        <ul> 
+            <li id="title"><strong>{{movies.title}}</strong></li>
+            <li  id = "ratings"> Ratings : {{movies.rating}}</li>
+            <li  id = "year" > Year: {{movies.year}}</li>
+            <li  id = "description">Description: {{movies.description}}</li>
+            
+            
+        </ul>
+        
+        </mat-card-content>
+        <div class="button-container">
+            <button class="remove-button" (click)="deletePackage(movies.id)">Remove</button>
+        </div>  
+    </mat-card>
+</div>   
+</div>
+
+   
+
+
+
+
+
+
+
+
+
+

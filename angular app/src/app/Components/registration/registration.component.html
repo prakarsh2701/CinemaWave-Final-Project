@@ -1,0 +1,47 @@
+<div class="background">
+    <div class="right-panel">
+      <mat-card class="login-card">
+        <div class="flex-fill">
+          <!-- <img class="align-content-center" src="assets/images/logo.png" alt="abc" > -->
+          <a class="navbar-brand" href="#">CinemaWave</a>
+        </div>
+        <mat-card-header>
+          <mat-card-title><h1>Sign-Up!</h1></mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <form (ngSubmit)="onUserRegistration()" #userForm="ngForm">
+            
+            <mat-form-field class="full-width">
+                <input matInput placeholder="Name" name="name" [(ngModel)]="user.name" #nameCtrl="ngModel" required pattern="[a-zA-Z ]+">
+                <mat-error *ngIf="nameCtrl?.errors?.['required']">Name is required.</mat-error>
+                <mat-error *ngIf="nameCtrl?.errors?.['pattern']">Name can only contain letters and spaces.</mat-error>
+              </mat-form-field>
+              
+              <mat-form-field class="full-width">
+                <input matInput placeholder="Email" name="email" [(ngModel)]="user.email" #emailCtrl="ngModel" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}">
+                <mat-error *ngIf="emailCtrl?.errors?.['required']">Email is required.</mat-error>
+                <mat-error *ngIf="emailCtrl?.errors?.['pattern']">Email must be in a valid format.</mat-error>
+              </mat-form-field>
+              
+              <mat-form-field class="full-width">
+                <input matInput type="password" placeholder="Password" name="password" [(ngModel)]="user.password" #passwordCtrl="ngModel" required minlength="8" pattern="^(?=.*[A-Z])(?=.*[@#$%^&+=]).*">
+                <mat-error *ngIf="passwordCtrl?.errors?.['required']">Password is required.</mat-error>
+                <mat-error *ngIf="passwordCtrl?.errors?.['minlength']">Password must be at least 8 characters.</mat-error>
+                <mat-error *ngIf="passwordCtrl?.errors?.['pattern']">Password must have one uppercase letter and one special character.</mat-error>
+              </mat-form-field>
+              
+              <mat-form-field class="full-width">
+                <input matInput type="password" placeholder="Confirm Password" name="confirmPassword" [(ngModel)]="user.confirmPassword" #confirmPasswordCtrl="ngModel" required>
+                <mat-error *ngIf="user.password !== user.confirmPassword && user.confirmPassword">Passwords do not match</mat-error>
+              </mat-form-field>
+            <button mat-raised-button color="primary" class="login-button" [disabled]="!userForm.form.valid || user.password !== user.confirmPassword">Register</button>
+          </form>
+          <div class="ref">Already have an account?
+            <a routerLink="/login">Try Logging In</a>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="left-panel"></div>
+  </div>
+  

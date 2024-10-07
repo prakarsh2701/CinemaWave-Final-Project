@@ -1,0 +1,119 @@
+/* Fullscreen Background Image */
+.bg-image {
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    min-height: 100vh;
+    width: 100vw;
+    
+  }
+  
+  /* For dark transparent navbar */
+  .navbar-dark .navbar-brand {
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(190, 35, 35);
+    margin-left: 2rem;
+  }
+  
+  .navbar-dark .navbar-nav .nav-link {
+    color: rgba(179, 48, 48, 0.8);
+    font-size:1rem;
+  }
+  
+  .navbar-dark .navbar-nav .nav-link:hover {
+    color: rgb(190, 35, 35);
+  }
+  
+  /* Text Styling */
+  .text-white {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    font-size: 1.2rem;
+  }
+  
+  /* Input and Button Styling */
+  .input-group .form-control {
+    height: 45px;
+  }
+  
+  .input-group .btn {
+    height: 45px;
+    width: 100%;
+  }
+  
+
+  /* Banner styles */
+.banner-container {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 40px;
+  max-width: 100vw;
+}
+
+.banner {
+  display: inline-block;
+  width: 20vw;
+  min-height: 150px; /* Set fixed height for even size */
+  margin-right: 1rem;
+  animation: scrollBanner 10s linear infinite;
+  overflow: hidden; /* Hide overflow content */
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image fits inside the banner box */
+}
+
+.banner p {
+  text-align: center;
+  font-size: 1rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+@keyframes scrollBanner {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+/* Media Queries for Small Screens */
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.5rem; /* Smaller logo for tablets */
+  }
+
+  .text-white {
+    font-size: 1rem; /* Smaller text */
+  }
+
+  .banner {
+    width: 40vw; /* Larger width for better viewing on smaller screens */
+    min-height: 120px; /* Adjusted height */
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-brand {
+    font-size: 1.25rem; /* Even smaller logo for mobile devices */
+  }
+
+  .text-white {
+    font-size: 0.875rem; /* Smaller text for mobile screens */
+  }
+
+  .banner {
+    width: 60vw; /* Larger banners for smaller screens */
+    min-height: 100px; /* Adjusted height */
+  }}

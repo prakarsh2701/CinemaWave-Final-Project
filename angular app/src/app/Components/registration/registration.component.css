@@ -1,0 +1,74 @@
+.background {
+    display: flex;
+    height: 100vh;
+    background-color: rgba(246, 173, 108, 0.4);
+  }
+  
+  .left-panel {
+    flex: 0.45;
+    background-image: url('../images/userregistration.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .right-panel {
+    flex: 0.55;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-card {
+    width: 70%;
+    height: auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  img{
+    background-color: black;
+    width: 80px;
+    margin-left: 37%;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  .login-button {
+    margin-top: 20px;
+    width: 100%;
+  }
+  @media (max-width: 768px) {
+    .left-panel {
+      display: none;
+    }
+  
+    .right-panel {
+      flex: 100;
+    }
+  }
+  
+  .navbar-brand {
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(190, 35, 35);
+    margin-left: 12rem;
+  }
+  .login-button {
+    margin-top: 20px;
+    width: 100%;
+    color: white; /* Text color */
+    margin-bottom: 15px;
+  }
+  
+  .login-button:disabled {
+    background-color: #b3b3b3; /* Button color when disabled */
+    color: white; /* Text color when disabled */
+    opacity: 0.6; /* Adjust opacity to make it slightly less prominent */
+    cursor: not-allowed; /* Change the cursor to indicate it is disabled */
+  }
+  

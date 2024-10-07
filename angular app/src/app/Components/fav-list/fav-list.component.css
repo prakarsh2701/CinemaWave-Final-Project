@@ -1,0 +1,138 @@
+/* Navbar adjustments */
+
+mat-card {
+    background-color: white; /* Change background color */
+    color: #000000;            /* Change text color */
+  }
+/* Body styling */
+#body {
+    background:#121212;
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the background image */
+    background-attachment: fixed; /* Keeps the background in place when scrolling */
+    margin: 0;
+    padding: 0;
+    padding-top: 70px; /* Adjust this value based on your navbar height */
+    min-height: 100vh; /* Ensures full height of viewport */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative; /* Ensures content is placed above the background */
+    z-index: 1; /* Lower than navbar */
+}
+
+/* Card container and layout settings */
+#card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Ensures 3 cards per row */
+    gap: 2cm; /* 2cm gap between cards */
+    justify-items: center;
+    margin-top: 70px; /* Space from the top (adjust if needed) */
+    padding-left: 2cm; /* Space from the left */
+    padding-right: 2cm; /* Space from the right */
+    padding-bottom: 140px; /* Space at the bottom */
+    z-index: 2; /* Ensures the cards stay below the navbar */
+    position: relative; /* Relative position for layering */
+}
+
+/* Card styling */
+#card {
+    display: flex; /* Enable flexbox layout */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-between; /* Space items evenly */
+    height: 500px; /* Maintain the height of the card */
+    width: 320px; /* Card width */
+    background-color: #ffffffe6; /* Semi-transparent white */
+    border-radius: 20px; /* Increased border radius for curved edges */
+    padding-bottom: 8px;
+    margin: 25px 0px;
+    cursor: pointer;
+    z-index: 3; /* Ensures card stays above the background image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for visibility */
+}
+
+/* Centering movie image */
+#movie-image {
+    display: flex;
+    justify-content: center; /* Horizontally center the image */
+    align-items: center; /* Vertically center the image */
+    height: 300px; /* Adjust the height based on how much space you want for the image */
+}
+
+img {
+    max-width: 100%; /* Ensure the image doesn't overflow its container */
+    max-height: 100%; /* Ensure the image doesn't overflow vertically */
+    width: auto; /* Maintain the aspect ratio */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 10px;
+}
+
+/* Movie description styling */
+#movie-description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+    padding: 10px;
+}
+
+
+
+/* Button container and styling */
+.button-container {
+    display: flex; /* Enable flexbox for centering */
+    justify-content: center; /* Center the button horizontally */
+    margin-top: auto; /* Push button to the bottom of the card */
+    margin-bottom: 20px; /* Add some space at the bottom */
+}
+
+/* Remove button styling */
+
+
+.remove-button {
+    background-color: #e00a0a; /* Base color for the button */
+    background-image: linear-gradient(to right, #e00a0a, #d00909); /* Gradient background */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 20px; /* Slightly reduced border radius for a compact look */
+    padding: 8px 16px; /* Reduced padding for a smaller button */
+    font-size: 16px; /* Smaller font size */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+.remove-button:hover {
+    background-color: #d00909; /* Darker red on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.remove-button:active {
+    transform: translateY(1px); /* Pressed effect */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Reduced shadow when pressed */
+}
+
+
+
+
+@media (max-width: 768px) {
+    #card-container {
+        grid-template-columns: repeat(2, 1fr); /* Adjust for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #card-container {
+        grid-template-columns: 1fr; /* Single column for very small screens */
+    }
+}

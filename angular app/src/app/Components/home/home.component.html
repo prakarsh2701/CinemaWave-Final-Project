@@ -1,0 +1,53 @@
+<div class="bg-image" style="background-image: url(http://surl.li/nllgxw); background-size: cover; height: 100vh; ">
+  
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+      <div class="container-fluid">
+        
+        <!-- Left: Movie App Name -->
+        <a class="navbar-brand" href="#">CinemaWave</a>
+  
+        <!-- Right: Language Selector & Sign In Button -->
+        <div class="d-flex align-items-center ms-auto">
+  
+          <!-- Sign In Button -->
+          <!-- <button class="btn btn-danger"  routerLink="/userRegistration" type="button" style="width: 200px;">Sign In</button> -->
+        </div>
+      </div>
+    </nav>
+
+
+
+  
+    <!-- Main Content (Centered on the page) -->
+    <div class="d-flex flex-column justify-content-center align-items-center text-center text-white" style="height: 80vh;">
+
+      <!-- Banners section -->
+  <div class="banner-container">
+    <div class="banner" *ngFor="let banner of banners">
+      <img [src]="banner.imageUrl" alt="Movies">
+      <!-- <p>{{ banner.text }}</p> -->
+    </div>
+  </div>
+      
+      <!-- Main Headline -->
+      <h1 class="display-4 fw-bold">Unlimited Movies, Series, and More</h1>
+      
+      <!-- Subheading -->
+      <p class="lead">A One stop solution for Movie Lovers </p>
+      
+      <!-- Call to Action -->
+      <p>Ready to experience endless entertainment? Click the button below to get started.</p>
+  
+      <!-- Email Input & Get Started Button -->
+      <div class="input-group" style="max-width: 400px;">
+        <!-- <input type="email" class="form-control" placeholder="Email address" aria-label="Email address"> -->
+        <button class="btn btn-danger" type="button" (click)="onGetStarted()" style="width: 100%;">Get Started</button>
+      </div>
+  
+    </div>
+    
+
+
+  </div>
+
