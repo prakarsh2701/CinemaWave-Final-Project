@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net8.0": {
+      "Consul/1.7.14.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0",
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Consul.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Consul.dll": {}
+        }
+      },
       "FluentValidation/11.8.0": {
         "type": "package",
         "compile": {
@@ -313,6 +326,23 @@
           }
         }
       },
+      "Ocelot.Provider.Consul/23.3.3": {
+        "type": "package",
+        "dependencies": {
+          "Consul": "1.7.14.1",
+          "Ocelot": "23.3.3"
+        },
+        "compile": {
+          "lib/net8.0/Ocelot.Provider.Consul.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Ocelot.Provider.Consul.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Swashbuckle.AspNetCore/6.4.0": {
         "type": "package",
         "dependencies": {
@@ -409,6 +439,19 @@
     }
   },
   "libraries": {
+    "Consul/1.7.14.1": {
+      "sha512": "JM1/sHsPhxTcawNKp0PaPRXeMqghjbn9L6lgPyNW6P5SnkcJ/rchQsHnDm8TlT51/ARX4bmboUzFRzU6arjSQQ==",
+      "type": "package",
+      "path": "consul/1.7.14.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "consul.1.7.14.1.nupkg.sha512",
+        "consul.nuspec",
+        "lib/net461/Consul.dll",
+        "lib/netstandard2.0/Consul.dll"
+      ]
+    },
     "FluentValidation/11.8.0": {
       "sha512": "TiEaaYqSIAS+wXQv46LRm8Mca092XYNePD0n231Hqlkmm5FuToZoWnjI1ef/vJUxBzqR7/k2vaVQXxijNgVKRQ==",
       "type": "package",
@@ -1097,6 +1140,23 @@
         "ocelot.nuspec"
       ]
     },
+    "Ocelot.Provider.Consul/23.3.3": {
+      "sha512": "X5pmq8WowF1caLnRHD3NuF8GQI9D9R6sBn+r5YGly6SA7/Nz24W3hQ/PRhjhgtRv9SDafQU0YGQDbRb7xIBFNw==",
+      "type": "package",
+      "path": "ocelot.provider.consul/23.3.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0/Ocelot.Provider.Consul.dll",
+        "lib/net6.0/Ocelot.Provider.Consul.xml",
+        "lib/net7.0/Ocelot.Provider.Consul.dll",
+        "lib/net7.0/Ocelot.Provider.Consul.xml",
+        "lib/net8.0/Ocelot.Provider.Consul.dll",
+        "lib/net8.0/Ocelot.Provider.Consul.xml",
+        "ocelot.provider.consul.23.3.3.nupkg.sha512",
+        "ocelot.provider.consul.nuspec"
+      ]
+    },
     "Swashbuckle.AspNetCore/6.4.0": {
       "sha512": "eUBr4TW0up6oKDA5Xwkul289uqSMgY0xGN4pnbOIBqCcN9VKGGaPvHX3vWaG/hvocfGDP+MGzMA0bBBKz2fkmQ==",
       "type": "package",
@@ -1232,6 +1292,7 @@
     "net8.0": [
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 8.0.8",
       "Ocelot >= 23.3.3",
+      "Ocelot.Provider.Consul >= 23.3.3",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
   },
@@ -1241,11 +1302,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\dot net training 2\\Movie Project\\API Gateway\\API Gateway.csproj",
+      "projectUniqueName": "E:\\testing movie\\Movie Project\\API Gateway\\API Gateway.csproj",
       "projectName": "API Gateway",
-      "projectPath": "E:\\dot net training 2\\Movie Project\\API Gateway\\API Gateway.csproj",
+      "projectPath": "E:\\testing movie\\Movie Project\\API Gateway\\API Gateway.csproj",
       "packagesPath": "C:\\Users\\KIIT\\.nuget\\packages\\",
-      "outputPath": "E:\\dot net training 2\\Movie Project\\API Gateway\\obj\\",
+      "outputPath": "E:\\testing movie\\Movie Project\\API Gateway\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\KIIT\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1285,6 +1346,10 @@
             "version": "[8.0.8, )"
           },
           "Ocelot": {
+            "target": "Package",
+            "version": "[23.3.3, )"
+          },
+          "Ocelot.Provider.Consul": {
             "target": "Package",
             "version": "[23.3.3, )"
           },

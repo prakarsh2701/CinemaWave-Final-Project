@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
+using Ocelot.Provider.Consul;
 using System.Text;
 
 namespace API_Gateway
@@ -15,7 +16,7 @@ namespace API_Gateway
 
             // Add services to the container.
             builder.Configuration.AddJsonFile("Ocelot.json");
-            builder.Services.AddOcelot();
+            builder.Services.AddOcelot().AddConsul();
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();

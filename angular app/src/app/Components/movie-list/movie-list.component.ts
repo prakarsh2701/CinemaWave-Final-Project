@@ -38,6 +38,7 @@ export class MovieListComponent {
   email: string = this.svc.getEmail();
 
   ngOnInit(): void {
+    this.email=this.svc.getEmail();
     const temp = this.svc.getToken();
     this.movieService.getMovies().subscribe(
       (movies) => {
@@ -57,6 +58,7 @@ export class MovieListComponent {
             }
           );
         } else {
+          this.moviesByGenre=this.movies;
           this.openSnackBar("Please Login to enjoy full features", "ok");
         }
   
@@ -81,8 +83,8 @@ export class MovieListComponent {
       console.log(this.moviesByGenre);
       this.movieService.searchMovies(this.searchQuery).subscribe(
         (response: any) => {
-
-          const searchResults = response.filter((searchedMovie: any) =>
+          console.log(response);
+          const searchResults = response.movies.filter((searchedMovie: any) =>
           this.moviesByGenre.some((movie) => movie.title.toLowerCase() === searchedMovie.title.toLowerCase())
           );
           this.mapWithFavMovies(searchResults);

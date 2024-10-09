@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API Gateway", "..\API Gatew
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Movies", "..\Movies\Movies.csproj", "{36E01BDE-E942-4821-9EC1-DC2133E4A218}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CinemaGo.Tests", "..\CinemaGo.Tests\CinemaGo.Tests.csproj", "{5A950ED7-C21A-4E98-B6F2-B9CCC05CB91A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{36E01BDE-E942-4821-9EC1-DC2133E4A218}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36E01BDE-E942-4821-9EC1-DC2133E4A218}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36E01BDE-E942-4821-9EC1-DC2133E4A218}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A950ED7-C21A-4E98-B6F2-B9CCC05CB91A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A950ED7-C21A-4E98-B6F2-B9CCC05CB91A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A950ED7-C21A-4E98-B6F2-B9CCC05CB91A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A950ED7-C21A-4E98-B6F2-B9CCC05CB91A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

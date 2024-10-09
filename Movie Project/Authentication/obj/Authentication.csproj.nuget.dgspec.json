@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\dot net training 2\\Movie Project\\Authentication\\Authentication.csproj": {}
+    "E:\\testing movie\\Movie Project\\Authentication\\Authentication.csproj": {}
   },
   "projects": {
-    "E:\\dot net training 2\\Movie Project\\Authentication\\Authentication.csproj": {
+    "E:\\testing movie\\Movie Project\\Authentication\\Authentication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\dot net training 2\\Movie Project\\Authentication\\Authentication.csproj",
+        "projectUniqueName": "E:\\testing movie\\Movie Project\\Authentication\\Authentication.csproj",
         "projectName": "Authentication",
-        "projectPath": "E:\\dot net training 2\\Movie Project\\Authentication\\Authentication.csproj",
+        "projectPath": "E:\\testing movie\\Movie Project\\Authentication\\Authentication.csproj",
         "packagesPath": "C:\\Users\\KIIT\\.nuget\\packages\\",
-        "outputPath": "E:\\dot net training 2\\Movie Project\\Authentication\\obj\\",
+        "outputPath": "E:\\testing movie\\Movie Project\\Authentication\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\KIIT\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -46,6 +46,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Consul": {
+              "target": "Package",
+              "version": "[1.7.14.4, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.8, )"
@@ -59,6 +63,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.8, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.21.0, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",

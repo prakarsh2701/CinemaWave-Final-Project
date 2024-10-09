@@ -19,7 +19,7 @@ namespace Movies.Controllers
             _movieService = movieService;
         }
 
-        
+        //getting all movies
         [HttpGet]
         public ActionResult<List<Movie>> GetMovies()
         {
@@ -41,7 +41,7 @@ namespace Movies.Controllers
 
 
 
-
+        //getting movies by genre
         [HttpGet("genre/{genre}")]
         public ActionResult<List<Movie>> GetMoviesByGenre(string genre)
         {
@@ -68,7 +68,7 @@ namespace Movies.Controllers
         }
 
 
-
+        // searching
 
         [HttpGet("search/{searchQuery}")]
         public ActionResult<List<Movie>> GetMoviesBySearch(string searchQuery)

@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using MongoDB.Driver;
+using MovieCatalogService;
 using Movies.DAL;
 using Movies.Models;
 using Movies.Repository;
@@ -27,7 +28,7 @@ namespace Movies
 
             builder.Services.AddScoped<IMovieRepository, MovieRepository>();
             builder.Services.AddScoped<IMovieService, MovieService>();
-
+            builder.Services.AddConsul(builder.Configuration);
             // Add CORS configuration
             builder.Services.AddCors(options =>
             {
@@ -60,7 +61,7 @@ namespace Movies
             app.UseAuthorization();
 
             app.MapControllers();
-
+            app.UseConsul(app.Configuration);
             app.Run();
         }
     }

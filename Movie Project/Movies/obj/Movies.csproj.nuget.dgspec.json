@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\dot net training 2\\Movie Project\\Movies\\Movies.csproj": {}
+    "E:\\testing movie\\Movie Project\\Movies\\Movies.csproj": {}
   },
   "projects": {
-    "E:\\dot net training 2\\Movie Project\\Movies\\Movies.csproj": {
+    "E:\\testing movie\\Movie Project\\Movies\\Movies.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\dot net training 2\\Movie Project\\Movies\\Movies.csproj",
+        "projectUniqueName": "E:\\testing movie\\Movie Project\\Movies\\Movies.csproj",
         "projectName": "Movies",
-        "projectPath": "E:\\dot net training 2\\Movie Project\\Movies\\Movies.csproj",
+        "projectPath": "E:\\testing movie\\Movie Project\\Movies\\Movies.csproj",
         "packagesPath": "C:\\Users\\KIIT\\.nuget\\packages\\",
-        "outputPath": "E:\\dot net training 2\\Movie Project\\Movies\\obj\\",
+        "outputPath": "E:\\testing movie\\Movie Project\\Movies\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\KIIT\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -46,6 +46,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Consul": {
+              "target": "Package",
+              "version": "[1.7.14.4, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[8.0.8, )"

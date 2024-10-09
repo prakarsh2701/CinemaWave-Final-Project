@@ -5,6 +5,7 @@ using CinemaGo.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using MovieCatalogService;
 using System.Text;
 
 namespace CinemaGo
@@ -26,7 +27,7 @@ namespace CinemaGo
             builder.Services.AddScoped<IFavouriteRepository, FavouriteRepository>();
             builder.Services.AddScoped<IFavouriteService, FavouriteService>();// Register the service
 
-
+            builder.Services.AddConsul(builder.Configuration);
             builder.Services.AddAuthentication(x =>
             {
                 x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -62,7 +63,7 @@ namespace CinemaGo
 
 
             app.MapControllers();
-
+            app.UseConsul(app.Configuration);
             app.Run();
         }
     }

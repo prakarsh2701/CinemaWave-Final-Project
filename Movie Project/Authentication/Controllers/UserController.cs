@@ -16,7 +16,7 @@ namespace Authentication.Controllers
         {
             this.svc = svc;
         }
-
+        //Registration
         [HttpPost]
         public IActionResult create([FromBody] UserRegistration userobj)
         {

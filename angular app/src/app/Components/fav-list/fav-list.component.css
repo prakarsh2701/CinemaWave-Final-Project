@@ -136,3 +136,9 @@ li {
         grid-template-columns: 1fr; /* Single column for very small screens */
     }
 }
+#empty{
+    color: wheat;
+    font-size: 35px;
+    padding: 20px 0px 0px 8px;
+    line-height: 40px;
+}  

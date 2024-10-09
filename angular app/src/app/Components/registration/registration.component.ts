@@ -51,7 +51,7 @@ export class RegistrationComponent {
       error: (err: any) => {
         if (err.status === 409) {
           // Handle user already exists case
-          this.openSnackBar(`User already exists:, ${err.error.message}`,"ok");
+          this.openSnackBar(`${err.error.message}`,"ok");
       } else {
           // Handle other errors
           this.openSnackBar(`An error occurred:', ${err}`,"ok");

@@ -3,6 +3,7 @@ using Authentication.Models;
 using Authentication.Repository;
 using Authentication.Services;
 using Microsoft.EntityFrameworkCore;
+using MovieCatalogService;
 
 namespace Authentication
 {
@@ -19,6 +20,7 @@ namespace Authentication
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddDbContext<DataContext>(o => o.UseSqlServer(builder.Configuration.GetConnectionString("MyCon")));
+            builder.Services.AddConsul(builder.Configuration);
             builder.Services.AddScoped<ITokenGenerator, TokenGenerator>();
             builder.Services.AddScoped<ILoginRepository, LoginRepository>();
             builder.Services.AddScoped<IUserRepository, UserRepository>();
@@ -37,7 +39,7 @@ namespace Authentication
 
             app.UseCors("AllowAngularOrigins");
             app.MapControllers();
-
+            app.UseConsul(app.Configuration);
             app.Run();
         }
     }

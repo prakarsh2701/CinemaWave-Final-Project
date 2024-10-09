@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\dot net training 2\\Movie Project\\API Gateway\\API Gateway.csproj": {}
+    "E:\\testing movie\\Movie Project\\API Gateway\\API Gateway.csproj": {}
   },
   "projects": {
-    "E:\\dot net training 2\\Movie Project\\API Gateway\\API Gateway.csproj": {
+    "E:\\testing movie\\Movie Project\\API Gateway\\API Gateway.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\dot net training 2\\Movie Project\\API Gateway\\API Gateway.csproj",
+        "projectUniqueName": "E:\\testing movie\\Movie Project\\API Gateway\\API Gateway.csproj",
         "projectName": "API Gateway",
-        "projectPath": "E:\\dot net training 2\\Movie Project\\API Gateway\\API Gateway.csproj",
+        "projectPath": "E:\\testing movie\\Movie Project\\API Gateway\\API Gateway.csproj",
         "packagesPath": "C:\\Users\\KIIT\\.nuget\\packages\\",
-        "outputPath": "E:\\dot net training 2\\Movie Project\\API Gateway\\obj\\",
+        "outputPath": "E:\\testing movie\\Movie Project\\API Gateway\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\KIIT\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -51,6 +51,10 @@
               "version": "[8.0.8, )"
             },
             "Ocelot": {
+              "target": "Package",
+              "version": "[23.3.3, )"
+            },
+            "Ocelot.Provider.Consul": {
               "target": "Package",
               "version": "[23.3.3, )"
             },

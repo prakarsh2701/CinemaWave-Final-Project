@@ -24,6 +24,9 @@
             <button class="remove-button" (click)="deletePackage(movies.id)">Remove</button>
         </div>  
     </mat-card>
+    <div *ngIf="!Movie || Movie.length === 0" id="empty">
+        Please Add Movies To Favourites!!!! 
+      </div>
 </div>   
 </div>
 

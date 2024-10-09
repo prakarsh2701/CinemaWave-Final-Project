@@ -1,124 +1,143 @@
 {
   "Routes": [
     {
+      "UseServiceDiscovery": true,
       "DownstreamPathTemplate": "/api/auth/login",
       "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 5289
-        }
-      ],
       "UpstreamPathTemplate": "/auth/login",
-      "UpstreamHttpMethod": [ "Post" ]
+      "UpstreamHttpMethod": [ "Post" ],
+      "RouteIsCaseSensitive": false,
+      "ServiceName": "auth",
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
+      "ReRoutesCaseSensitive": false
     },
     {
+      "UseServiceDiscovery": true,
       "DownstreamPathTemplate": "/api/user",
       "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 5289
-        }
-      ],
       "UpstreamPathTemplate": "/auth/user",
-      "UpstreamHttpMethod": [ "Post" ]
+      "UpstreamHttpMethod": [ "Post" ],
+      "RouteIsCaseSensitive": false,
+      "ServiceName": "auth",
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
+      "ReRoutesCaseSensitive": false
     },
     {
+      "UseServiceDiscovery": true,
       "DownstreamPathTemplate": "/api/User/GetUserById?email={email}",
       "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 5289
-        }
-      ],
       "UpstreamPathTemplate": "/User/GetUserById?email={email}",
-      "UpstreamHttpMethod": [ "Get" ]
+      "UpstreamHttpMethod": [ "Get" ],
+      "RouteIsCaseSensitive": false,
+      "ServiceName": "auth",
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
+      "ReRoutesCaseSensitive": false
     },
     {
+      "UseServiceDiscovery": true,
       "DownstreamPathTemplate": "/api/favourites/email/{email}",
       "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 5142
-        }
-      ],
       "UpstreamPathTemplate": "/cinemago/favourites/email/{email}",
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "JwtBearer",
         "AllowedScopes": []
       },
-      "UpstreamHttpMethod": [ "Get" ]
+      "UpstreamHttpMethod": [ "Get" ],
+      "RouteIsCaseSensitive": false,
+      "ServiceName": "fav",
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
+      "ReRoutesCaseSensitive": false
     },
     {
+      "UseServiceDiscovery": true,
       "DownstreamPathTemplate": "/api/favourites",
       "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 5142
-        }
-      ],
       "UpstreamPathTemplate": "/cinemago/favourites",
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "JwtBearer",
         "AllowedScopes": []
       },
-      "UpstreamHttpMethod": [ "Post" ]
+      "UpstreamHttpMethod": [ "Post" ],
+      "RouteIsCaseSensitive": false,
+      "ServiceName": "fav",
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
+      "ReRoutesCaseSensitive": false
     },
     {
+      "UseServiceDiscovery": true,
       "DownstreamPathTemplate": "/api/favourites/{id}",
       "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 5142
-        }
-      ],
       "UpstreamPathTemplate": "/cinemago/favourites/{id}",
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "JwtBearer",
         "AllowedScopes": []
       },
-      "UpstreamHttpMethod": [ "Delete" ]
+      "UpstreamHttpMethod": [ "Delete" ],
+      "RouteIsCaseSensitive": false,
+      "ServiceName": "fav",
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
+      "ReRoutesCaseSensitive": false
     },
     {
+      "UseServiceDiscovery": true,
       "DownstreamPathTemplate": "/api/movie",
       "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 5109
-        }
-      ],
       "UpstreamPathTemplate": "/movies",
-      "UpstreamHttpMethod": [ "Get" ]
+      "UpstreamHttpMethod": [ "Get" ],
+      "RouteIsCaseSensitive": false,
+      "ServiceName": "movie",
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
+      "ReRoutesCaseSensitive": false
     },
     {
+      "UseServiceDiscovery": true,
       "DownstreamPathTemplate": "/api/movie/genre/{genre}",
       "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 5109
-        }
-      ],
       "UpstreamPathTemplate": "/movies/genre/{genre}",
-      "UpstreamHttpMethod": [ "Get" ]
+      "UpstreamHttpMethod": [ "Get" ],
+      "RouteIsCaseSensitive": false,
+      "ServiceName": "movie",
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
+      "ReRoutesCaseSensitive": false
     },
     {
+      "UseServiceDiscovery": true,
       "DownstreamPathTemplate": "/api/Movie/search/{query}",
       "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 5109
-        }
-      ],
       "UpstreamPathTemplate": "/movies/search/{query}",
-      "UpstreamHttpMethod": [ "Get" ]
+      "UpstreamHttpMethod": [ "Get" ],
+      "RouteIsCaseSensitive": false,
+      "ServiceName": "movie",
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
+      "ReRoutesCaseSensitive": false
     }
-  ]
+  ],
+  "GlobalConfiguration": {
+    "ServiceDiscoveryProvider": {
+      "Scheme": "http",
+      "Host": "localhost",
+      "Port": 8500,
+      "Type": "Consul",
+      "PollingInterval": 1000
+      //"ConfigurationKey": "Ocelot_A"
+    }
+  }
 }

@@ -20,11 +20,11 @@
   }
   
   .login-card {
-    width: 70%;
-    height: auto;
-    padding: 20px;
+    width: 60%; /* Reduced from 70% */
+    padding: 5px;
+    margin-top: 10%; /* Reduce margin if needed */
     background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
   
@@ -39,7 +39,7 @@
   }
   
   .login-button {
-    margin-top: 20px;
+    margin-top: 10px;
     width: 100%;
   }
   @media (max-width: 768px) {
@@ -59,10 +59,9 @@
     margin-left: 12rem;
   }
   .login-button {
-    margin-top: 20px;
+
     width: 100%;
     color: white; /* Text color */
-    margin-bottom: 15px;
   }
   
   .login-button:disabled {
@@ -70,5 +69,11 @@
     color: white; /* Text color when disabled */
     opacity: 0.6; /* Adjust opacity to make it slightly less prominent */
     cursor: not-allowed; /* Change the cursor to indicate it is disabled */
+  }
+  @media (max-width: 768px) {
+    .login-card {
+      width: 90%; /* Increase the width slightly for mobile screens */
+      margin-top: 15%; /* Adjust top margin for better positioning on smaller screens */
+    }
   }
   

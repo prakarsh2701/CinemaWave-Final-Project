@@ -43,7 +43,7 @@ namespace Authentication.Controllers
                     return Unauthorized(new
                     {
                         Status = 401,
-                        message = "Invalid email or password. Please try again."
+                        message = "Invalid email or password."
                     });
                 }
             }
